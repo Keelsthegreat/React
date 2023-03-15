@@ -42,7 +42,7 @@
 
 /* CSS */
 .btn {
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   border: 0;
   border-radius: .5rem;
   box-sizing: border-box;
@@ -60,6 +60,7 @@
   user-select: none;
   -webkit-user-select: none;
   touch-action: manipulation;
+  text-align: center;
 }
 
 .btn:hover {
@@ -77,4 +78,63 @@
 
 li {
   text-decoration: none;
+}
+
+/* --------------------------------------------------- */
+
+.navBar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.navBar ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+.navBar li {
+  margin-left: 20px;
+  
+ 
+}
+
+.navBar a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.navBar a:hover {
+  color: #ccc;
+}
+
+/* ---------------------------------------------- */
+
+.education {
+  margin: 20px 0;
+  font-family: sans-serif;
+  list-style-type: none;
+}
+
+.pic {
+  width: 400px;
+  height: 400px;
+}
+.subHeader2{
+  list-style-type: none;
+}
+.port {
+  display: inline-flex;
+  font-size: 20px;
+  font-family: sans-serif;
+  margin-bottom: 10PX;
 }
