@@ -4,7 +4,7 @@ function NavBar() {
   return (
     <div> 
         <ul className='navBar'>
-            <li><Link to ='/'>iStocks</Link></li>
+            <li><Link to ='/'>Home</Link></li>
             <li><Link to ='/Stock'>Stocks</Link></li>
             <li><Link to ='/About'>About</Link></li>
             

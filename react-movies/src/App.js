@@ -1,16 +1,17 @@
 import {useState, useEffect} from "react";
-import logo from "./logo.svg";
 import "./App.css";
 // WE IMPORT OUR COMPONENTS
-import MovieDisplay from "./components/MovieDisplay";
-import Form from "./components/Form";
+import MovieDisplay from "./Components/MovieDisplay";
+import Form from "./Components/Form";
+import { Routes, Route } from "react-router-dom";
+import NavBar from "./Components/NavBar";
 
 export default function App() {
   //variable with your apiKey
-  const apiKey = "64d4e02a";
+  const apiKey = "64d4e02a"
 
   //State to hold movie data
-  const [movie, setMovie] = useState(null);
+  const [movie, setMovie] = useState('');
 
   //Function to getMovies
   const getMovie = async (searchTerm) => {
@@ -28,8 +29,14 @@ export default function App() {
   // We pass the getMovie function as a prop called moviesearch
   return (
     <div className="App">
-      <Form moviesearch={getMovie} />
-      <MovieDisplay />
+      <Form moviesearch={getMovie}/>
+      <MovieDisplay movie={movie}/>
     </div>
   );
 }
+{/* <NavBar/>
+<Routes>
+  <Route path='moviePath' element= {<Form moviesearch={getMovie}/>}/>
+  <Route path='moviePath' element= {<MovieDisplay movie ={movie}/>}/>
+
+</Routes> */}

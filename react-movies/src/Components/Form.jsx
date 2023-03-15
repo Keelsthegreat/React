@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
-export default function  (props) {
+export default function Form (props) {
   //State to hold the data of our form
   const [formData, setFormData] = useState({
     searchterm: "",
@@ -24,7 +24,7 @@ export default function  (props) {
   //The component must return some JSX
   return (
     <div>
-      <form onSubmit={handleSubmit}>
+      <form className="searchBar" onSubmit={handleSubmit}>
         <input
           type="text"
           name="searchterm"
@@ -37,28 +37,3 @@ export default function  (props) {
 }
 // Define a function that is our component, always make sure to declare the props parameter so you can use props in your component
 // You can also destructure your props directly from the parameter list
-export default function MovieDisplay ({ movie }){
-  //function to return loaded JSX
-  const loaded = () => {
-    return (
-      <>
-        <h1>{movie.Title}</h1>
-        <h2>{movie.Genre}</h2>
-        <img src={movie.Poster} alt={movie.Title} />
-        <h1>{movie.Plot</h1>
-        <h2>{movie.Year}</h2>
-      </>
-    );
-  };
-
-  //function to return loading JSX
-  const loading = () => {
-    return <h1>No Movie to Display</h1>;
-  };
-
-  //Ternary operator will determine which functions JSX we will return
-  return movie ? loaded() : loading();
-};
-
-// We must export the component to use it in other files
-export default MovieDisplay;
